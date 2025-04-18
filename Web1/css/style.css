@@ -1,0 +1,616 @@
+/* 
+ * 教育门户网站主样式
+ * 仿照新东方网站风格设计
+ */
+
+/* 全局样式 */
+:root {
+  --primary-color: #e74c3c;
+  --secondary-color: #3498db;
+  --accent-color: #f39c12;
+  --text-color: #333;
+  --light-gray: #f5f5f5;
+  --medium-gray: #ddd;
+  --dark-gray: #666;
+  --white: #fff;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 4px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--light-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--medium-gray);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 0;
+  position: relative;
+  padding-left: 15px;
+}
+
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 20px;
+  background-color: var(--primary-color);
+}
+
+.more-link {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+}
+
+/* 顶部导航 */
+.site-header {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  flex: 0 0 auto;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.main-nav {
+  flex: 1 1 auto;
+  margin: 0 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  display: block;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-login, .btn-register {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.btn-login {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-register {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* 轮播图 */
+.hero-banner {
+  padding: 20px 0;
+  background-color: var(--white);
+}
+
+.swiper-container {
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  height: 400px;
+}
+
+.slide-content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.slide-content p {
+  margin-bottom: 20px;
+  color: var(--dark-gray);
+  font-size: 1rem;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.slide-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 资讯卡片 */
+.info-cards {
+  padding: 30px 0;
+}
+
+.info-card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* 热点资讯 */
+.featured-news {
+  padding: 30px 0;
+  background-color: var(--white);
+}
+
+.main-news {
+  background-color: var(--light-gray);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  height: 100%;
+}
+
+.main-news h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.main-news p {
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+.btn-read-more {
+  display: inline-block;
+  padding: 6px 15px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.sub-news-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sub-news-item {
+  flex: 1;
+  padding: 15px;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius);
+  margin-bottom: 10px;
+}
+
+.sub-news-item:last-child {
+  margin-bottom: 0;
+}
+
+.sub-news-item h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-more {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
+
+/* 学习工具 */
+.learning-tools {
+  padding: 30px 0;
+}
+
+.tool-card {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  text-align: center;
+  height: 100%;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+}
+
+.tool-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.tool-card p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+.btn-tool {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+/* 课程推荐 */
+.course-recommendations {
+  padding: 30px 0;
+  background-color: var(--white);
+}
+
+.course-card {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  height: 100%;
+  transition: var(--transition);
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-image {
+  height: 160px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.course-card:hover .course-image img {
+  transform: scale(1.05);
+}
+
+.course-info {
+  padding: 20px;
+}
+
+.course-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.course-info p {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+  min-height: 60px;
+}
+
+.btn-course {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+/* 友情链接 */
+.friend-links {
+  padding: 30px 0;
+}
+
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.friend-link {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.friend-link:hover {
+  color: var(--primary-color);
+}
+
+/* 页脚 */
+.site-footer {
+  background-color: #2c3e50;
+  color: var(--white);
+  padding: 50px 0 20px;
+}
+
+.footer-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.site-footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.site-footer h4 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--white);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  color: var(--white);
+}
+
+.copyright {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .main-nav ul {
+    justify-content: flex-start;
+  }
+  
+  .main-nav li {
+    margin: 0 10px;
+  }
+  
+  .swiper-slide {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .slide-content, .slide-image {
+    flex: none;
+  }
+  
+  .slide-content {
+    padding: 30px;
+  }
+  
+  .slide-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-wrap: wrap;
+  }
+  
+  .logo-container {
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .main-nav {
+    order: 3;
+    flex: 1 1 100%;
+    margin: 15px 0 0;
+  }
+  
+  .main-nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .user-actions {
+    order: 2;
+    margin-left: auto;
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+  }
+  
+  .info-card, .tool-card, .course-card {
+    margin-bottom: 20px;
+  }
+} 

@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学海门户 - 高级教育资源平台</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="home.html">
+            <span class="logo-text">学海门户</span>
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="home.html" class="nav-link active">首页</a></li>
+            <li><a href="courses.html" class="nav-link">课程</a></li>
+            <li><a href="news.html" class="nav-link">资讯</a></li>
+            <li><a href="about.html" class="nav-link">关于我们</a></li>
+            <li><a href="contact.html" class="nav-link">联系我们</a></li>
+          </ul>
+        </nav>
+        <div class="nav-buttons">
+          <a href="login.html" class="btn btn-outline">登录</a>
+          <a href="register.html" class="btn btn-primary">注册</a>
+        </div>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区块 -->
+  <section class="hero-section bg-gradient">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">探索无限学习可能</h1>
+        <p class="hero-subtitle">学海门户为您提供高质量教育资源，助您开启知识之旅</p>
+        <div class="hero-buttons">
+          <a href="courses.html" class="btn btn-primary btn-lg">浏览课程</a>
+          <a href="#features" class="btn btn-outline btn-lg">了解更多</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="assets/images/placeholder-hero.jpg" alt="学习场景插图">
+      </div>
+    </div>
+    <div class="shape-divider">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 特色课程 -->
+  <section class="section" id="featured-courses">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-primary">精品课程</span>
+        <h2 class="section-title">探索热门学习路径</h2>
+        <p class="section-subtitle">精心挑选的高质量课程，满足您的学习需求</p>
+      </div>
+      
+      <div class="course-grid">
+        <!-- 课程卡片 1 -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="assets/images/placeholder-course1.jpg" alt="课程图片">
+            <div class="course-level">初级</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-category">编程开发</div>
+            <h3 class="course-title">Web全栈开发工程师</h3>
+            <div class="course-meta">
+              <span class="course-duration"><i data-lucide="clock"></i> 12周</span>
+              <span class="course-lessons"><i data-lucide="book-open"></i> 48课时</span>
+            </div>
+            <p class="course-desc">从零开始学习Web开发技术栈，包括HTML、CSS、JavaScript、React和Node.js等核心技术。</p>
+            <div class="course-footer">
+              <div class="course-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">4.8 (246)</span>
+              </div>
+              <div class="course-price">¥2,980</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 课程卡片 2 -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="assets/images/placeholder-course2.jpg" alt="课程图片">
+            <div class="course-level">中级</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-category">数据科学</div>
+            <h3 class="course-title">Python数据分析与可视化</h3>
+            <div class="course-meta">
+              <span class="course-duration"><i data-lucide="clock"></i> 8周</span>
+              <span class="course-lessons"><i data-lucide="book-open"></i> 32课时</span>
+            </div>
+            <p class="course-desc">学习Python编程语言，掌握数据处理、分析和可视化技能，为您的数据科学之路打下坚实基础。</p>
+            <div class="course-footer">
+              <div class="course-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-count">4.6 (189)</span>
+              </div>
+              <div class="course-price">¥1,880</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 课程卡片 3 -->
+        <div class="course-card">
+          <div class="course-card-image">
+            <img src="assets/images/placeholder-course3.jpg" alt="课程图片">
+            <div class="course-level">高级</div>
+          </div>
+          <div class="course-card-body">
+            <div class="course-category">人工智能</div>
+            <h3 class="course-title">机器学习与深度学习实战</h3>
+            <div class="course-meta">
+              <span class="course-duration"><i data-lucide="clock"></i> 16周</span>
+              <span class="course-lessons"><i data-lucide="book-open"></i> 64课时</span>
+            </div>
+            <p class="course-desc">深入学习机器学习算法和深度学习框架，通过实际项目掌握AI应用开发能力。</p>
+            <div class="course-footer">
+              <div class="course-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-count">4.9 (312)</span>
+              </div>
+              <div class="course-price">¥3,680</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="courses.html" class="btn btn-primary">查看全部课程</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学习工具 -->
+  <section class="section bg-light" id="learning-tools">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-primary">学习工具</span>
+        <h2 class="section-title">提升学习效率的专业工具</h2>
+        <p class="section-subtitle">我们提供多种学习工具，让您的学习过程更加高效和愉悦</p>
+      </div>
+      
+      <div class="tools-grid">
+        <!-- 工具卡片 1 -->
+        <div class="tool-card">
+          <div class="tool-icon">
+            <i data-lucide="code"></i>
+          </div>
+          <h3 class="tool-title">在线代码编辑器</h3>
+          <p class="tool-desc">提供多种编程语言支持，实时编译运行，助您快速掌握编程技能。</p>
+        </div>
+        
+        <!-- 工具卡片 2 -->
+        <div class="tool-card">
+          <div class="tool-icon">
+            <i data-lucide="file-text"></i>
+          </div>
+          <h3 class="tool-title">学习笔记系统</h3>
+          <p class="tool-desc">智能记录和整理学习内容，支持多种格式和云同步功能。</p>
+        </div>
+        
+        <!-- 工具卡片 3 -->
+        <div class="tool-card">
+          <div class="tool-icon">
+            <i data-lucide="calendar"></i>
+          </div>
+          <h3 class="tool-title">学习计划管理</h3>
+          <p class="tool-desc">科学规划学习进度，设置目标和提醒，保持高效学习状态。</p>
+        </div>
+        
+        <!-- 工具卡片 4 -->
+        <div class="tool-card">
+          <div class="tool-icon">
+            <i data-lucide="users"></i>
+          </div>
+          <h3 class="tool-title">学习社区</h3>
+          <p class="tool-desc">与同学交流讨论，分享学习心得，互相解答疑问。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最新资讯 -->
+  <section class="section" id="latest-news">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-primary">最新资讯</span>
+        <h2 class="section-title">教育行业动态</h2>
+        <p class="section-subtitle">关注最新教育趋势和行业发展动态</p>
+      </div>
+      
+      <div class="news-grid">
+        <!-- 资讯卡片 1 -->
+        <div class="news-card">
+          <div class="news-image">
+            <img src="assets/images/placeholder-news1.jpg" alt="资讯图片">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date"><i data-lucide="calendar"></i> 2023-06-15</span>
+              <span class="news-category">教育科技</span>
+            </div>
+            <h3 class="news-title">AI技术如何重塑未来教育模式</h3>
+            <p class="news-excerpt">人工智能技术正在深刻改变传统教育模式，个性化学习、智能评估等成为新趋势...</p>
+            <a href="news-detail.html" class="news-link">阅读更多 <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- 资讯卡片 2 -->
+        <div class="news-card">
+          <div class="news-image">
+            <img src="assets/images/placeholder-news2.jpg" alt="资讯图片">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date"><i data-lucide="calendar"></i> 2023-06-10</span>
+              <span class="news-category">行业报告</span>
+            </div>
+            <h3 class="news-title">2023年在线教育行业发展报告</h3>
+            <p class="news-excerpt">最新报告显示，在线教育市场持续增长，专业技能培训和终身学习需求显著提升...</p>
+            <a href="news-detail.html" class="news-link">阅读更多 <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- 资讯卡片 3 -->
+        <div class="news-card">
+          <div class="news-image">
+            <img src="assets/images/placeholder-news3.jpg" alt="资讯图片">
+          </div>
+          <div class="news-content">
+            <div class="news-meta">
+              <span class="news-date"><i data-lucide="calendar"></i> 2023-06-05</span>
+              <span class="news-category">学习方法</span>
+            </div>
+            <h3 class="news-title">高效学习的5个科学方法</h3>
+            <p class="news-excerpt">基于认知科学的研究，这些学习方法被证明能显著提高学习效率和知识保留率...</p>
+            <a href="news-detail.html" class="news-link">阅读更多 <i data-lucide="arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <a href="news.html" class="btn btn-primary">查看更多资讯</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据统计 -->
+  <section class="section bg-primary text-white" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <!-- 统计项 1 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="users"></i>
+          </div>
+          <div class="stat-number">50,000+</div>
+          <div class="stat-text">注册学员</div>
+        </div>
+        
+        <!-- 统计项 2 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="book-open"></i>
+          </div>
+          <div class="stat-number">200+</div>
+          <div class="stat-text">精品课程</div>
+        </div>
+        
+        <!-- 统计项 3 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="award"></i>
+          </div>
+          <div class="stat-number">98%</div>
+          <div class="stat-text">学员满意度</div>
+        </div>
+        
+        <!-- 统计项 4 -->
+        <div class="stat-item">
+          <div class="stat-icon">
+            <i data-lucide="briefcase"></i>
+          </div>
+          <div class="stat-number">85%</div>
+          <div class="stat-text">就业率</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 学员评价 -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-primary">学员评价</span>
+        <h2 class="section-title">他们如何评价我们</h2>
+        <p class="section-subtitle">来自真实学员的学习体验和收获</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <!-- 评价卡片 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"学海门户的课程质量非常高，讲师专业且耐心。通过Web全栈开发课程的学习，我成功转行成为一名前端开发工程师，薪资提升了50%以上。"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="assets/images/placeholder-avatar1.jpg" alt="学员头像" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">张明</h4>
+              <p class="testimonial-position">前端开发工程师</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 评价卡片 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★★</div>
+            <p class="testimonial-text">"平台提供的学习工具非常实用，特别是在线代码编辑器和学习计划管理功能，帮助我在工作之余高效学习。课程内容紧跟行业最新趋势，非常实用。"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="assets/images/placeholder-avatar2.jpg" alt="学员头像" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">李婷</h4>
+              <p class="testimonial-position">数据分析师</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 评价卡片 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="testimonial-rating">★★★★☆</div>
+            <p class="testimonial-text">"作为一名转行人士，学海门户的课程为我提供了系统化的学习路径。虽然学习过程有些挑战，但在导师的指导下，我最终掌握了机器学习技能并成功就业。"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="assets/images/placeholder-avatar3.jpg" alt="学员头像" class="testimonial-avatar">
+            <div class="testimonial-info">
+              <h4 class="testimonial-name">王强</h4>
+              <p class="testimonial-position">AI工程师</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作伙伴 -->
+  <section class="section bg-light" id="partners">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="badge badge-primary">合作伙伴</span>
+        <h2 class="section-title">值得信赖的合作伙伴</h2>
+        <p class="section-subtitle">与行业领先企业共同推进教育创新</p>
+      </div>
+      
+      <div class="partners-grid">
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner1.png" alt="合作伙伴logo">
+        </div>
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner2.png" alt="合作伙伴logo">
+        </div>
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner3.png" alt="合作伙伴logo">
+        </div>
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner4.png" alt="合作伙伴logo">
+        </div>
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner5.png" alt="合作伙伴logo">
+        </div>
+        <div class="partner-item">
+          <img src="assets/images/placeholder-partner6.png" alt="合作伙伴logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 订阅区域 -->
+  <section class="section cta-section" id="subscribe">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2 class="cta-title">订阅我们的教育资讯</h2>
+        <p class="cta-text">获取最新课程信息、行业动态和学习资源</p>
+        <form class="subscribe-form">
+          <div class="form-group">
+            <input type="email" placeholder="请输入您的邮箱地址" class="form-control">
+            <button type="submit" class="btn btn-primary">订阅</button>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="privacyCheck">
+            <label class="form-check-label" for="privacyCheck">
+              我同意接收学海门户的最新资讯和优惠信息
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">
+            <span class="logo-text">学海门户</span>
+          </a>
+          <p class="footer-desc">提供高质量的在线教育资源，助力每个人实现职业发展和个人成长。</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i data-lucide="github"></i></a>
+            <a href="#" class="social-link"><i data-lucide="twitter"></i></a>
+            <a href="#" class="social-link"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="social-link"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">快速链接</h4>
+          <ul class="footer-links">
+            <li><a href="home.html">首页</a></li>
+            <li><a href="courses.html">课程</a></li>
+            <li><a href="news.html">资讯</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">学习资源</h4>
+          <ul class="footer-links">
+            <li><a href="#">学习路径</a></li>
+            <li><a href="#">技能测评</a></li>
+            <li><a href="#">学习工具</a></li>
+            <li><a href="#">常见问题</a></li>
+            <li><a href="#">帮助中心</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4 class="footer-title">联系我们</h4>
+          <ul class="contact-info">
+            <li><i data-lucide="map-pin"></i> 北京市海淀区中关村大街1号</li>
+            <li><i data-lucide="phone"></i> (010) 1234-5678</li>
+            <li><i data-lucide="mail"></i> contact@xuehai.edu.cn</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          &copy; 2023 学海门户. 保留所有权利.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">隐私政策</a>
+          <a href="#">服务条款</a>
+          <a href="#">Cookie 设置</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 移动菜单 -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <span class="logo-text">学海门户</span>
+      </div>
+      <button class="mobile-menu-close" id="mobileMenuClose">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <ul class="mobile-nav-list">
+        <li><a href="home.html" class="mobile-nav-link active">首页</a></li>
+        <li><a href="courses.html" class="mobile-nav-link">课程</a></li>
+        <li><a href="news.html" class="mobile-nav-link">资讯</a></li>
+        <li><a href="about.html" class="mobile-nav-link">关于我们</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">联系我们</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-buttons">
+      <a href="login.html" class="btn btn-outline btn-block">登录</a>
+      <a href="register.html" class="btn btn-primary btn-block">注册</a>
+    </div>
+  </div>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" id="backToTop">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 初始化 Lucide 图标
+    lucide.createIcons();
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      // 移动菜单切换
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      
+      if (mobileMenuToggle && mobileMenu && mobileMenuClose) {
+        mobileMenuToggle.addEventListener('click', function() {
+          mobileMenu.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        mobileMenuClose.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+      }
+      
+      // 回到顶部按钮
+      const backToTop = document.getElementById('backToTop');
+      
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > 300) {
+            backToTop.classList.add('show');
+          } else {
+            backToTop.classList.remove('show');
+          }
+        });
+        
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html> 
